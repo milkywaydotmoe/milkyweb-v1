@@ -1,0 +1,99 @@
+body, html {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	background: #FFF;
+	font-size: 12px;
+	font-family: Calibri, sans-serif;
+}
+
+.page {
+	padding: 12px;
+}
+
+.page h1:first-child {
+	margin-top: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	color: blue;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.hero {
+	width: 400px;
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+}
+
+iframe {
+	border: 3px double #000;
+}
+
+.content {
+	height: 500px;
+	width: 1200px;
+	position: absolute;
+	bottom: 220px;
+	left: 260px;
+}
+
+.menu a {
+	padding: 3px;
+	display: inline-block;
+}
+
+.menu {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	bottom: 60px;
+	left: 460px;
+}
+
+.blinkies {
+	border: 3px double #000;
+	width: 300px;
+	height: 100px;
+	position: absolute;
+	bottom: 60px;
+	left: 560px;
+	overflow: auto;
+}
+
+.title {
+	color: red;
+	font-size: 36px;
+	letter-spacing: -7px;
+	position: relative;
+	bottom: -170px;
+	left: 190px;
+}
+
+
+h1, h2, h3, h4 {
+	font-size: 12px;
+	text-transform: all;
+	letter-spacing: 0.5px;
+}
+
+h1 {
+	background: yellow;
+	border-top: 2px solid red;
+	border-bottom: 2px solid red;
+	padding-left: 4px;
+}
+
+h2 {
+	border-left: 2px solid red;
+	padding-left: 4px;
+}

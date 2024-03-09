@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>himaonline</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/x-icon" href="/"> 
+<link rel="stylesheet" href="/index.css">
+<style>
+  body{
+    background:
+      radial-gradient(circle farthest-side at 0% 50%,#477cff 23.5%,#0000 0)22.05px 31.5px,
+      radial-gradient(circle farthest-side at 0% 50%,#6eaaff 24%,#0000 0)19.95px 31.5px,
+      linear-gradient(#477cff 14%,#0000 0, #0000 85%,#477cff 0)0 0,
+      linear-gradient(150deg,#477cff 24%,#6eaaff 0,#6eaaff 26%,#0000 0,#0000 74%,#6eaaff 0,#6eaaff 76%,#477cff 0)0 0,
+      linear-gradient(30deg,#477cff 24%,#6eaaff 0,#6eaaff 26%,#0000 0,#0000 74%,#6eaaff 0,#6eaaff 76%,#477cff 0)0 0,
+      linear-gradient(90deg,#6eaaff 2%,#477cff 0,#477cff 98%,#6eaaff 0%)0 0 #477cff;
+    background-color: #477cff;
+    background-size: 42px 63px;
+    font-size: 2vh;
+    margin:auto;
+    width:60%;
+    font-size: 2vh;
+}
+
+.footer { 
+grid-area: footer; 
+background-color: white;
+width: 100%;
+height: 100%;
+border:1px solid #ffffff;
+text-align: center;
+}
+
+  .container {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0.5%  0.5%;
+    /* this is for the gaps between the "sections". */
+    grid-auto-flow: row;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+    "content content content content content"
+    "content content content content content"
+    "content content content content content"
+    "footer footer footer footer footer";
+    width: 100%;
+    height: 100%;
+    margin-bottom: 5%;
+}
+
+p{
+  font-size: small;
+}
+</style>
+</head>
+<body>
+  <a href="/home.html"><img class="title" src="/assets/TITLE.png"></a>
+  <div class="container">
+
+    <div class="content">
+      <div id="pop"><span class="welcome" style="font-size: 8vh; letter-spacing: 6px;">Frequently Asked Questions</span></div>
+    <hr>
+    <ul>
+      <p><strong>Q: Why "milkytism"?</strong><br>A: Milktea. Autism. combine.</p>
+      <p><strong>Q: Do you actually have autism?</strong><br>A: Yep. Diagnosed and everything. I even got the ID to show for it.</p>
+      <p><strong>Q: How did you build this website?</strong><br>A: I used VSCode, and a combination of antidepressants and coffee!</p>
+      <p><strong>Q: How do you identify?</strong><br>A: As A Problem.</p>
+      <p><strong>Q: What OS do you use?</strong><br>A: A heavily modified version of NTDEV's Tiny10 on my studio PC, and Fedora 38 on my laptop.</p>
+      <p><strong>Q: Where are you from?</strong><br>A: The Philippines, unfortunately. Yes i can speak Filipino. Haha, Optimum Pride.</p>
+      <p><strong>Q: What software do you use for music?</strong><br>A: FL Studio, Synthesizer V, FamiStudio, and the modern clone of FastTracker II</p>
+      <p><strong>Q: What about video editing???</strong><br>A: Vegas Pro 17, and a WHOLE lot of pain.</p>
+      <p><strong>Q: Where can i find you?</strong><br>A: Email.</p>
+      <p><strong>Q: Is your site secure?</strong><br>A: As long as Cloudflare doesn't mess up.</p>
+      <p><strong>Q: What software license does this site use?</strong><br>A: <a href="http://www.wtfpl.net/about/">WTFPL Version 2.</a>, Yes you are free to copy.</p>
+    </ul>
+    <hr>
+    <div class="footer" style="max-height: 2%;">
+      <a href="/index.html">GO BACK</a>
+    </div>
+  </div>
+</body>
+  </html> 
