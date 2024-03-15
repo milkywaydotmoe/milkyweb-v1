@@ -10,8 +10,8 @@
     <link rel="stylesheet" type="text/css" href="cursor.css">
 </head>
 <body>
-    <div id="bgcontainer"><div id="bg1"><div id="bg2"></div></div></div>
-    <a href="/"><img class="title" src="/assets/TITLE.png"></a>
+    <div id="bgcontainer"><div id="bg1"></div></div>
+    <img class="title" style="text-align: center;" src="/assets/TITLE.png">
     <div class="container">
         <div class="header">
             <div class="header_img"></div> <!-- Header image -->
@@ -20,6 +20,10 @@
                 <div class="marquee-content" id="marquee"></div>
             </div>
         </div>
+
+        <!-- Sticky element -->
+    <img class="sticky-element" src="/assets/hy2wm.png">
+    
 
         <div class="content">
             <div id="pop"><span class="welcome" style="font-size: 6vh; letter-spacing: 3px;"><img src="assets/spinningcd.gif"> welcome :3c <img src="assets/spinningcd.gif"></span></div>
@@ -96,7 +100,29 @@
         <div class="footer">
             <div style="margin-top: 0.5vh; margin-bottom: 0.5vh;">
                 <img src="/assets/starryborder.gif">
-                <p style="margin:0%;">remember to fluff some tail! uwu // 5D4B6D4E — 7FFFFFFF! ♡ <a href="https://justinjackson.ca/webmaster/">IM A FUCKING WEBMISTRESS!!</a></p>
+                <p style="margin:0%;">remember to fluff some tail! uwu // 5D4B6D4E — <span id="unix-time-placeholder"></span>! ♡ <a href="https://justinjackson.ca/webmaster/">IM A FUCKING WEBMISTRESS!!</a></p>
+
+                <script>
+                    // Function to get the current Unix time in hexadecimal
+                    function getCurrentUnixTimeHex() {
+                        const currentUnixTime = Math.floor(Date.now() / 1000); // Convert milliseconds to seconds
+                        return currentUnixTime.toString(16).toUpperCase(); // Convert to hexadecimal and uppercase
+                    }
+
+                    // Function to update the displayed Unix time in hexadecimal
+                    function updateUnixTime() {
+                        const unixTimePlaceholder = document.getElementById('unix-time-placeholder');
+                        const currentUnixTimeHex = getCurrentUnixTimeHex();
+                        unixTimePlaceholder.textContent = currentUnixTimeHex;
+                    }
+
+                    // Update the displayed Unix time initially
+                    updateUnixTime();
+
+                    // Update the displayed Unix time every second
+                    setInterval(updateUnixTime, 1000);
+                </script>
+
                 <img src="/assets/starryborder.gif">
             </div>
         </div>
@@ -105,7 +131,7 @@
             <br>
             <span style="font-size: 2.5vh; letter-spacing: 2px; text-align:center; font-family: dosfont;"> update corner</span>
             <hr>
-            <p style="font-size: medium;">MiLKYFonts Drop I is now out! Introducing 2 new fonts i've made! Tablature and Paperthin Mono!</p>
+            <p style="font-size: medium;">Started experimenting with more flashy effects... Hope it looks good :3</p>
         </div> 
 
         <div class="nav">
@@ -116,11 +142,11 @@
             <hr>
             <b><p style="text-align:left; padding-left: 5px; font-size: medium; font-family: dosfont;">MAIN</b> ...→</p>
             <ul style="font-size: 10pt;">
-                <li><a href="/faq.html"><i class="nf nf-oct-question"></i> FAQ</a></li>
+                <li><a href="/"><i class="nf nf-oct-question"></i> FAQ (CLOSED FOR RENOVATIONS)</a></li>
                 <li><a href="/media.html"><i class="nf nf-md-disc_player"></i> MEDIA ARCHIVE CENTER</a></li>
                 <li><a href="/teto.html"><i class="nf nf-md-baguette"></i> TETO ARCHIVE</a></li>
                 <li><a href="https://neocities.org/site/milkysys"><i class="nf nf-md-cat"></i> NEOCITIES PROFILE</a></li>
-                <li><a href="https://neocities.org/site/milkysys"><i class="nf nf-fa-tumblr"></i> TUMBLR BLOG</a></li>
+                <li><a href="https://www.tumblr.com/blog/milkyautism"><i class="nf nf-fa-tumblr"></i> TUMBLR BLOG</a></li>
                 <li><a href="https://github.com/milkytism/milkyweb"><i class="nf nf-cod-source_control"></i> WEBSITE SOURCE</a></li>
             </ul>
             <b><p style="text-align:left; padding-left: 5px; font-size: medium; font-family: dosfont;">ASSORTED LINKS</b> ...→</p>
@@ -151,7 +177,7 @@
             <span style="font-size: 2.5vh; letter-spacing: 2px; font-family: dosfont;"> navlink</span>
             <br>
             <hr>
-            <iframe width="180" height="180" style="align-content: center; text-align: center;" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
+            <iframe width="180" height="180" style="align-content: center; text-align: center; image-rendering: pixelated;" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
             <br>
             <img src="/assets/turtle.png" alt="A tiny little turtle!" title="A tiny little turtle!" onclick="playAudio('/assets/squeak.mp3')">
         </div>
@@ -220,7 +246,6 @@
         </div>
     </div>
     </div>
-
 
     <!-- JavaScript -->
     <script src="marquee.js" defer></script>
