@@ -5,9 +5,9 @@
     <title>milkyway systems</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="/assets/favicon.png"> 
-    <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" type="text/css" href="https://www.nerdfonts.com/assets/css/webfont.css">
     <link rel="stylesheet" type="text/css" href="cursor.css">
+    <link rel="stylesheet" type="text/css" href="index_lite.css" id="stylesheet">
 </head>
 <body>
     <div id="bgcontainer"><div id="bg1"></div></div>
@@ -20,6 +20,12 @@
                 <div class="marquee-content" id="marquee"></div>
             </div>
         </div>
+
+        <style>
+            .switchstyle {
+              margin: 5px;
+            }
+        </style>
 
         <!-- Sticky element -->
     <img class="sticky-element" src="/assets/hy2wm.png">
@@ -184,7 +190,34 @@
             <hr>
             <iframe width="180" height="180" style="align-content: center; text-align: center; image-rendering: pixelated;" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
             <br>
-            <img src="/assets/turtle.png" alt="A tiny little turtle!" title="A tiny little turtle!" onclick="playAudio('/assets/squeak.mp3')">
+            <img src="day.png" id="toggleButton" onclick="toggleStylesheet()" class="switchstyle" alt="Toggle Style">
+
+    <script>
+        var buttonState = 0; // Initial state of the button
+
+        function toggleStylesheet() {
+            var stylesheet = document.getElementById('stylesheet');
+            // Check if the current stylesheet is "index_lite.css"
+            if (stylesheet.getAttribute('href') === 'index_lite.css') {
+                // Switch to "index_dark.css"
+                stylesheet.setAttribute('href', 'index_dark.css');
+            } else {
+                // Switch back to "index_lite.css" if any other stylesheet is applied
+                stylesheet.setAttribute('href', 'index_lite.css');
+            }
+
+            // Toggle between button images
+            var button = document.getElementById('toggleButton');
+            if (buttonState === 0) {
+                button.src = 'day.png'; // Change to the second image
+                buttonState = 1; // Update button state
+            } else {
+                button.src = 'night.png'; // Change back to the first image
+                buttonState = 0; // Update button state
+            }
+        }
+    </script>        
+
         </div>
 
         <div class="cbox"> 
