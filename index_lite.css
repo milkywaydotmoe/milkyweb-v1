@@ -179,12 +179,12 @@ p {
 
 ::-moz-selection {
     color: #ffffff;
-    background: #558AC0;
+    background: #369ff5;
 }
 
 ::selection {
     color: #ffffff;
-    background: #558AC0;
+    background: #369ff5;
 }
 
 @font-face {

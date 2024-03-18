@@ -145,25 +145,42 @@ hr {
 }
 
 a {
-    color: #a300f5;
+    color: #fff;
+    animation: linkrbw linear infinite;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
     font-weight: bold;
     text-decoration: none;
 }
 
 a:link {
-    color: #a300f5;
+    color: #fff;
+    animation: linkrbw linear infinite;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
     font-weight: bold;
     text-decoration: none;
 }
 
 a:hover {
-    color: #a300f5;
+    color: #fff;
+    animation: linkrbw linear infinite;
+    animation-duration: 1.5s;
     animation-iteration-count: infinite;
     font-weight: bold;
     text-decoration: underline;
     cursor: url("/cursor/link.gif"), auto;
+}
+
+@keyframes linkrbw {
+    0%, 100% {color: #ff6969;}
+    12.5% {color: #ffa769;}
+    25% {color: #f7ff69;}
+    37.5% {color: #69ff7f;}
+    50% {color: #69faff;}
+    62.5% {color: #7069ff;}
+    75% {color: #b969ff;}
+    87.5% {color: #ff69dc;}
 }
 
 p {
