@@ -26,10 +26,107 @@
             .switchstyle {
               margin: 5px;
             }
+
+        /* Style for the pop-up image */
+        #popupImage {
+            display: none; /* Initially hidden */
+            position: fixed;
+            max-width: 170px;
+            bottom: -19%;
+            right: 20px;
+            z-index: 9999; /* Ensure it's above other elements */
+            max-width: 350px; /* Set max width */
+            animation: bounceInOut 0.5s; /* Apply bounce-in bounce-out animation */
+        }
+
+        /* Keyframes for bounce-in bounce-out animation */
+        @keyframes bounceInOut {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            50% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            89% {
+                transform: translateY(5px);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
         </style>
 
         <!-- Sticky element -->
     <img class="sticky-element" src="/assets/hy2wm.png">
+    <img id="popupImage" src="/assets/idiotplush.png">
+
+    <script>
+        var audio = new Audio(); // Audio object
+        var soundFiles = []; // Array to store the sound files
+        var lastPlayedSounds = []; // Array to store the last played sound files
+
+        // Function to fetch sound files from the /silly directory
+        async function fetchSoundFiles() {
+            try {
+                const response = await fetch('/silly/');
+                const text = await response.text();
+                const parser = new DOMParser();
+                const htmlDocument = parser.parseFromString(text, 'text/html');
+                const links = htmlDocument.querySelectorAll('a[href]');
+                links.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href.endsWith('.mp3')) {
+                        soundFiles.push(href);
+                    }
+                });
+            } catch (error) {
+                console.error('Error fetching sound files:', error);
+            }
+        }
+
+        // Function to get a random sound file from the array
+        function getRandomSoundFile() {
+            return soundFiles[Math.floor(Math.random() * soundFiles.length)];
+        }
+
+        // Function to toggle visibility of pop-up image and play audio
+        async function togglePopupImage() {
+            var popupImage = document.getElementById("popupImage");
+            if (popupImage.style.display === "none") {
+                popupImage.style.display = "block"; // Show the pop-up image
+                if (soundFiles.length === 0) {
+                    await fetchSoundFiles(); // Fetch sound files if not fetched already
+                }
+                if (soundFiles.length > 0) {
+                    var randomSoundFile = getRandomSoundFile(); // Get a random sound file
+                    // Ensure the same sound isn't played for the next 5 clicks
+                    while (lastPlayedSounds.includes(randomSoundFile)) {
+                        randomSoundFile = getRandomSoundFile();
+                    }
+                    // Add the newly selected sound file to the last played list
+                    lastPlayedSounds.push(randomSoundFile);
+                    if (lastPlayedSounds.length > 10) {
+                        // If more than 10 sound files are stored, remove the oldest one
+                        lastPlayedSounds.shift();
+                    }
+                    audio.src = randomSoundFile; // Set the source of the audio
+                    audio.volume = 0.316; // Setting volume to achieve -10dB (Volume is logarithmic, 0.316 is approximately -10dB)
+                    audio.play(); // Play the audio
+                }
+            } else {
+                popupImage.style.display = "none"; // Hide the pop-up image
+                audio.pause(); // Pause the audio
+                audio.currentTime = 0; // Rewind the audio to the beginning
+            }
+        }
+
+        // Add event listener to the title image for toggling the pop-up image
+        document.querySelector('.title').addEventListener('click', togglePopupImage);
+    </script>
     
 
         <div class="content">
@@ -139,7 +236,7 @@
             <br>
             <span style="font-size: 2.5vh; letter-spacing: 2px; text-align:center; font-family: dosfont;"> update corner</span>
             <hr>
-            <p style="font-size: medium; text-align: justify;">Working harder, Making it better, Doing it faster, Going on stronger!</p>
+            <p style="font-size: medium; text-align: justify;">Some people say... if you click the logo, a small little friend will greet you! Try it!</p>
         </div> 
 
         <div class="nav">
