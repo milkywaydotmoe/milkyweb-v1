@@ -205,36 +205,6 @@ p {
     background: #a300f5;
 }
 
-@font-face {
-    font-family: riffic;
-    src: url(/fonts/RifficFree-Bold.ttf);
-}
-
-@font-face {
-    font-family: title;
-    src: url(/fonts/GoldenGirdle.otf);
-}
-
-@font-face {
-    font-family: bitmap;
-    src: url(/fonts/MDJPG16.TTF);
-}
-
-@font-face {
-    font-family: miami;
-    src: url(/fonts/miamiwriting.ttf);
-}
-
-@font-face {
-    font-family: dosfont;
-    src: url(/fonts/Web437_Nix8810_M15.woff);
-}
-
-@font-face {
-    font-family: dosfont2;
-    src: url(/fonts/Web437_NEC_APC3_8x16.woff);
-}
-
 .title {
     display: flex;
     align-content: center;
@@ -247,7 +217,7 @@ p {
     display: table;
     margin: 0 auto;
     color: #fff;
-    letter-spacing: 2vh;
+    letter-spacing: 1vh;
 }
 
 .container {
