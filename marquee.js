@@ -1,5 +1,5 @@
 // Define the initial message
-let message = "Thank you all for 20000 views and counting!!! Y'all are legends!";
+let message = "She had hearts in her eyes, she was rooting for me all the time... Her love, the type, that makes you dedicate your life~";
 
 // Function to wrap each letter of the message in <span> elements with animation delay
 function wrapLettersInSpans(message) {
