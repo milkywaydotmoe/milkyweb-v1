@@ -5,6 +5,7 @@
     text-align: left;
     background-image: url(https://milkyway.nekoweb.org/assets/sitebox.png); /* Only nekoweb URLs allowed, use full url to your site like https://example.nekoweb.org/images/coolbg.png */
     background-repeat: no-repeat;
+    z-index: 1;
     color: #00ff00;
     font-size: 12px;
 }
@@ -14,5 +15,6 @@
     text-shadow: 1px 2px 0px #009900;
 }
 .site-box > a > span {
+    z-index: 0;
     color:  #00ff00;
 }
