@@ -9,10 +9,10 @@
     font-size: 12px;
 }
 .site-box > a > p {
-    color: var(#00ff00);
+    color: #00ff00;
     font-weight: bold;
     text-shadow: 1px 2px 0px #009900;
 }
 .site-box > a > span {
-    color: var(--darkbrown);
+    color:  #00ff00;
 }
