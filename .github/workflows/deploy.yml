@@ -12,11 +12,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Prepare build
-        run: |
-          mkdir -p ./build
-          cp -r ./* ./build
+          with: 
+            path: ./build
 
       - name: Deploy to Nekoweb
         uses: mp-pinheiro/nekoweb-deploy@main
