@@ -22,8 +22,8 @@
 }
 
 .site-box::after {
-    content:url(image url);
+    content:url(https://milkyway.nekoweb.org/assets/lilmilk.png);
     position:absolute;
-    top: %;
-    left: %
+    top: 0%;
+    left: 0%
 }
