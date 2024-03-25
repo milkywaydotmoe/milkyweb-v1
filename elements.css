@@ -3,7 +3,7 @@
 /* Must start with ".site-box". Change how your website will appear on main nekoweb site: https://lune.dimden.dev/405a44b7e5.png */
 .site-box {
     text-align: left;
-    content: url(https://milkyway.nekoweb.org/assets/sitebox.png); /* Only nekoweb URLs allowed, use full url to your site like https://example.nekoweb.org/images/coolbg.png */
+    background-image: url(https://milkyway.nekoweb.org/assets/sitebox.png); /* Only nekoweb URLs allowed, use full url to your site like https://example.nekoweb.org/images/coolbg.png */
     background-repeat: no-repeat;
     color: #00ff00;
     font-size: 12px;
@@ -16,7 +16,6 @@
 }
 .site-box > a > span {
     color:  #00ff00;
-    margin-left: 10px;
 }
 
 .site-box::after {
