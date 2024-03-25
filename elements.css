@@ -10,6 +10,7 @@
 }
 .site-box > a > p {
     color: #00ff00;
+    margin-left: 10px;
     font-weight: bold;
     text-shadow: 1px 2px 0px #009900;
 }
